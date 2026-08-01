@@ -17,14 +17,14 @@ test.describe('Category Products', () => {
     await homePage.verifyCategoriesVisible();
 
     // Click Women -> Dress
-    await homePage.openWomenDressCategory();
-
+    await homePage.openWomenCategory();
+    await homePage.openDressCategory();
     // Verify Women category page
     await homePage.verifyWomenCategory();
 
     // Click Men -> T-Shirts
-    await homePage.openMenTshirtsCategory();
-
+    await homePage.openMenCategory();
+    await homePage.openTshirtsCategory();
     // Verify Men category page
     await homePage.verifyMenCategory();
 
