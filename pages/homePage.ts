@@ -1,5 +1,6 @@
+//object model for home page
 import { Page, Locator, expect } from '@playwright/test';
-
+// The Page Object Model separates the page logic from the test logic
 export class HomePage {
   readonly page: Page;
 
@@ -44,7 +45,7 @@ export class HomePage {
     await expect(this.categoriesTitle).toHaveText('Category');
   }
 
-  // Open Women -> Dress
+  // Open Women  Dress
   async openWomenCategory() {
     await this.womenCategory.click();
 }
@@ -59,7 +60,7 @@ async verifyWomenCategory() {
     await expect(this.pageTitle).toContainText('Dress');
 }
 
-  // Open Men -> T-Shirts
+  // Open Men  T-Shirts
  async openMenCategory() {
     await this.menCategory.click();
 }
